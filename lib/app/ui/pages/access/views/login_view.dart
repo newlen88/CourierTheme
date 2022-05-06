@@ -1,3 +1,9 @@
+import 'package:courier_theme/app/ui/components/custom_button.dart';
+import 'package:courier_theme/app/ui/components/password_input.dart';
+import 'package:courier_theme/app/ui/routes/routes.dart';
+import 'package:courier_theme/generated/l10n.dart';
+import 'package:courier_theme/helpers/images.dart';
+import 'package:courier_theme/helpers/responsive.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -5,6 +11,162 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final theme = Theme.of(context);
+    final locale = S.of(context);
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: SizedBox(
+            height: context.height - context.mediaQueryPadding.vertical,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Spacer(),
+                Image.asset(
+                  ImageResources.appLogo,
+                  scale: 3,
+                ),
+                const Spacer(),
+                Container(
+                  height: context.hp(55),
+                  decoration: BoxDecoration(
+                    color: theme.backgroundColor,
+                    borderRadius: const BorderRadiusDirectional.only(
+                      topStart: Radius.circular(60.0),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const SizedBox(height: 32.0),
+                      Text(
+                        'Login',
+                        textAlign: TextAlign.center,
+                        style: theme.textTheme.headline5!
+                            .copyWith(color: theme.hoverColor),
+                      ),
+                      const Spacer(flex: 3),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.of(context).size.width / 12,
+                          // vertical: MediaQuery.of(context).size.width / 40,
+                        ),
+                        child: TextField(
+                          // controller: emailController,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            labelText: locale.countryText,
+                            hintText: locale.selectCountryFromList,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20.0),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.of(context).size.width / 12,
+                          // vertical: MediaQuery.of(context).size.width / 40,
+                        ),
+                        child: PasswordInput(
+                          // controller: emailController,
+                          label: locale.phoneText,
+                          hint: locale.phoneHint,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.of(context).size.width / 12,
+                          // vertical: MediaQuery.of(context).size.width / 40,
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // xOffset = 0;
+                            // yOffset = 0;
+                            // scaleFactor = 1;
+                            // isDrawerOpen = false;
+                            // Navigator.pushReplacement(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (BuildContext context) => HomePage(),
+                            //   ),
+                            // );
+                          },
+                          child: Text(
+                            locale.continueText,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                // color: GoRideColors.black,
+                                fontSize: 16),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(310, 50),
+                            // primary: GoRideColors.yellow,
+                          ),
+                        ),
+                      ),
+                      // CustomButton(
+                      //   radius: const BorderRadius.only(
+                      //       topLeft: Radius.circular(35.0),
+                      //       bottomRight: Radius.circular(35.0)),
+                      //   onPressed: () =>
+                      //       Navigator.pushNamed(context, Routes.rSplash),
+                      // ),
+                      Text('\n' + locale.signinOTP,
+                          textAlign: TextAlign.center,
+                          style: theme.textTheme.subtitle1),
+                      const Spacer(flex: 3),
+                      Text(
+                        locale.orContinue,
+                        textAlign: TextAlign.center,
+                        style: theme.textTheme.headline5!
+                            .copyWith(color: theme.hoverColor),
+                      ),
+                      const Spacer(flex: 2),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: CustomButton(
+                              text: locale.facebook,
+                              padding: 14.0,
+                              color: Color(0xff3b45c1),
+                              // onPressed: () => Navigator.pushNamed(
+                              //   context,
+                              //   SignInRoutes.socialLogin,
+                              // ),
+                            ),
+                          ),
+                          Expanded(
+                            child: CustomButton(
+                              text: locale.google,
+                              padding: 14.0,
+                              color: Color(0xffff452c),
+                              // onPressed: () => Navigator.pushNamed(
+                              //   context,
+                              //   SignInRoutes.socialLogin,
+                              // ),
+                            ),
+                          ),
+                          Expanded(
+                            child: CustomButton(
+                              text: locale.apple,
+                              padding: 14.0,
+                              color: theme.primaryColorDark,
+                              // onPressed: () => Navigator.pushNamed(
+                              //   context,
+                              //   SignInRoutes.socialLogin,
+                              // ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
