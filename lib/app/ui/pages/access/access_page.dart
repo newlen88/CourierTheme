@@ -24,7 +24,7 @@ class AccessPage extends StatelessWidget {
             transitionType: SharedAxisTransitionType.horizontal,
           );
         },
-        child: RegisterView(),
+        child: LoginView(),
       ),
     );
   }

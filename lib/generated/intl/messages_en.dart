@@ -156,6 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "landmark": MessageLookupByLibrary.simpleMessage("Enter Landmark"),
         "length": MessageLookupByLibrary.simpleMessage("Length"),
         "loggingout": MessageLookupByLibrary.simpleMessage("Logging out"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "makelessSpicyWithLessgravy": MessageLookupByLibrary.simpleMessage(
             "Make less spicy with less gravy."),
@@ -164,12 +165,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
         "myDeliv": MessageLookupByLibrary.simpleMessage("My Deliveries"),
         "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
+        "nameApp": MessageLookupByLibrary.simpleMessage("TAENS"),
         "nameHint": MessageLookupByLibrary.simpleMessage("Enter Full name"),
         "namePerson": MessageLookupByLibrary.simpleMessage("Name of Person"),
         "nameRes": MessageLookupByLibrary.simpleMessage("Name of Restaurant"),
         "nameStore": MessageLookupByLibrary.simpleMessage("Name of Store"),
         "nameText": MessageLookupByLibrary.simpleMessage("Full Name"),
         "networkError": MessageLookupByLibrary.simpleMessage("Network error"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "office": MessageLookupByLibrary.simpleMessage("Office"),
         "orContinue": MessageLookupByLibrary.simpleMessage("or Continue with"),
@@ -184,6 +187,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Enter 6 digit verification code"),
         "packofEverydayMilk":
             MessageLookupByLibrary.simpleMessage("Pack of Everyday Milk"),
+        "passwordHint": MessageLookupByLibrary.simpleMessage("Enter password"),
+        "passwordText": MessageLookupByLibrary.simpleMessage("Password"),
         "pastDeliv": MessageLookupByLibrary.simpleMessage("Past Deliveries"),
         "payPal": MessageLookupByLibrary.simpleMessage("PayPal"),
         "payPayPalAccount":
@@ -214,6 +219,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Proceed to Payment"),
         "promo": MessageLookupByLibrary.simpleMessage("Promotional Ads"),
         "recentSearch": MessageLookupByLibrary.simpleMessage("Recent Searches"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerText": MessageLookupByLibrary.simpleMessage("Register"),
         "resendText": MessageLookupByLibrary.simpleMessage("RESEND"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
@@ -239,10 +245,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "signinfailed": MessageLookupByLibrary.simpleMessage("Sign in failed"),
         "signoutAccount": MessageLookupByLibrary.simpleMessage(
             "Signout from current account"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "socialText": MessageLookupByLibrary.simpleMessage(
             "You’re almost logged in.Kindly provide your phone number for verification."),
         "stripe": MessageLookupByLibrary.simpleMessage("Stripe"),
         "submitText": MessageLookupByLibrary.simpleMessage("Submit"),
+        "subnameApp": MessageLookupByLibrary.simpleMessage("S.A."),
         "support": MessageLookupByLibrary.simpleMessage("Support"),
         "sureText": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "thanksText": MessageLookupByLibrary.simpleMessage(

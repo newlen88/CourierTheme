@@ -1,4 +1,12 @@
 {
+  "nameApp": "TAENS",
+  "subnameApp": "S.A.",
+  "skip": "Omitir",
+  "next": "Siguiente",
+  "login": "Ingresar",
+  "register": "Registrar",
+  "passwordText": "Contraseña",
+  "passwordHint": "Introduzca su contraseña",
   "signIn": "Iniciar sesión con número de teléfono",
   "countryText": "Seleccionar país",
   "phoneText": "Número de teléfono",

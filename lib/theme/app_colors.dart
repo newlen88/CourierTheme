@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const Color kPrimaryColor = Color(0xfffdb915);
   static const Color kSecondaryColor = Color(0xfffdb915);
+  static const Color kBackgroundColor = Color.fromARGB(255, 192, 192, 192);
   static const Color kDisabledColor = Color(0xff616161);
   static const Color kTextColor = Color(0xfffff9e9);
-  static const Color kWhiteColor = Colors.white;
   static const Color kLightTextColor = Color(0xff747474);
   static const Color kCardTextColor = Color(0xfff8f9fd);
   static const Color kTransparentColor = Colors.transparent;
@@ -18,4 +18,7 @@ class AppColors {
   static const Color kButtonBorderColor = Color(0xffe1e1e1);
   static const Color kButtonTextColor = Color(0xffbababa);
   static const Color kContainerShadowColor = Color(0xff87fddc82);
+
+  static const Color kBlackColor = Color(0xffF5F5F5);
+  static const Color kWhiteColor = Colors.white;
 }

@@ -20,6 +20,35 @@ class AppThemes {
       // textTheme: textTheme.apply(bodyColor: Colors.white),
       elevation: 0,
     ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(color: AppColors.kPrimaryColor),
+        ),
+        minimumSize: const Size(310, 43),
+        textStyle: const TextStyle(
+          fontSize: 14,
+          color: AppColors.kWhiteColor,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        side: const BorderSide(width: 1.0, color: AppColors.kPrimaryColor),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(color: AppColors.kPrimaryColor),
+        ),
+        minimumSize: const Size(310, 43),
+        textStyle: const TextStyle(
+          fontSize: 14,
+          color: AppColors.kPrimaryColor,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
     // floatingActionButtonTheme: const FloatingActionButtonThemeData(
     //   backgroundColor: AppColors.secondaryColor,
     // ),

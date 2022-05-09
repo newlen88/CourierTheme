@@ -23,6 +23,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     return ElevatedButton(
       onPressed: onPressed,
       child: Text(
@@ -30,12 +31,12 @@ class CustomButton extends StatelessWidget {
         style: style ?? theme.textTheme.button,
       ),
       style: ElevatedButton.styleFrom(
-        minimumSize: const Size(170, 55),
+        minimumSize: const Size(310, 45),
         primary: color ?? theme.buttonTheme.colorScheme?.primary,
-        shape: RoundedRectangleBorder(
-          borderRadius: radius,
-          side: BorderSide(color: borderColor),
-        ),
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: radius,
+        //   side: BorderSide(color: borderColor),
+        // ),
       ),
     );
   }

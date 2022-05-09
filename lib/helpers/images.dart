@@ -1,6 +1,8 @@
 class ImageResources {
   static const baseImageUrl = 'assets/images';
-  static const appLogo = baseImageUrl + '/courierone.png';
+  static const splashBackground = baseImageUrl + '/splash_background.png';
+  static const appLogo = baseImageUrl + '/logo.svg';
+  static const menuBanner = baseImageUrl + '/banner.png';
   static const appLogoCirculo = baseImageUrl + '/logo_circulo.png';
   static const appLogoInv = baseImageUrl + '/logoInv.svg';
   static const loginBackground = baseImageUrl + '/bgcon.png';
@@ -8,8 +10,8 @@ class ImageResources {
 
   /* --------------------------------- SLIDERS -------------------------------- */
 
-  static const slider1 = baseImageUrl + '/sliders/girl.png';
-  static const slider2 = baseImageUrl + '/sliders/SliderLogin2.png';
-  static const slider3 = baseImageUrl + '/sliders/SliderLogin3.png';
-  static const slider4 = baseImageUrl + '/sliders/SliderLogin4.png';
+  static const onboard1 = baseImageUrl + '/onboard/onboard1.jpeg';
+  static const onboard2 = baseImageUrl + '/onboard/onboard2.jpeg';
+  static const onboard3 = baseImageUrl + '/onboard/onboard3.jpeg';
+  static const onboard4 = baseImageUrl + '/onboard/onboard4.jpeg';
 }

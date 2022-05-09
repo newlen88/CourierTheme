@@ -50,21 +50,61 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Sign in with phone number`
-  String get signIn {
+  /// `TAENS`
+  String get nameApp {
     return Intl.message(
-      'Sign in with phone number',
-      name: 'signIn',
+      'TAENS',
+      name: 'nameApp',
       desc: '',
       args: [],
     );
   }
 
-  /// `Select Country`
-  String get countryText {
+  /// `S.A.`
+  String get subnameApp {
     return Intl.message(
-      'Select Country',
-      name: 'countryText',
+      'S.A.',
+      name: 'subnameApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
       desc: '',
       args: [],
     );
@@ -85,6 +125,46 @@ class S {
     return Intl.message(
       'Enter phone number',
       name: 'phoneHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get passwordText {
+    return Intl.message(
+      'Password',
+      name: 'passwordText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter password`
+  String get passwordHint {
+    return Intl.message(
+      'Enter password',
+      name: 'passwordHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in with phone number`
+  String get signIn {
+    return Intl.message(
+      'Sign in with phone number',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Country`
+  String get countryText {
+    return Intl.message(
+      'Select Country',
+      name: 'countryText',
       desc: '',
       args: [],
     );

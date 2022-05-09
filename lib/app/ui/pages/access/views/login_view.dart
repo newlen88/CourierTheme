@@ -1,10 +1,14 @@
 import 'package:courier_theme/app/ui/components/custom_button.dart';
 import 'package:courier_theme/app/ui/components/password_input.dart';
+import 'package:courier_theme/app/ui/pages/access/views/register_view.dart';
+import 'package:courier_theme/app/ui/pages/menu/menu_page.dart';
 import 'package:courier_theme/app/ui/routes/routes.dart';
 import 'package:courier_theme/generated/l10n.dart';
 import 'package:courier_theme/helpers/images.dart';
 import 'package:courier_theme/helpers/responsive.dart';
+import 'package:courier_theme/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -22,9 +26,9 @@ class LoginView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Spacer(),
-                Image.asset(
-                  ImageResources.appLogo,
-                  scale: 3,
+                SizedBox(
+                  width: 600,
+                  child: SvgPicture.asset(ImageResources.appLogo),
                 ),
                 const Spacer(),
                 Container(
@@ -40,7 +44,7 @@ class LoginView extends StatelessWidget {
                     children: [
                       const SizedBox(height: 32.0),
                       Text(
-                        'Login',
+                        locale.login,
                         textAlign: TextAlign.center,
                         style: theme.textTheme.headline5!
                             .copyWith(color: theme.hoverColor),
@@ -48,15 +52,14 @@ class LoginView extends StatelessWidget {
                       const Spacer(flex: 3),
                       Container(
                         margin: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width / 12,
-                          // vertical: MediaQuery.of(context).size.width / 40,
+                          horizontal: context.width / 12,
                         ),
                         child: TextField(
                           // controller: emailController,
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
-                            labelText: locale.countryText,
-                            hintText: locale.selectCountryFromList,
+                            labelText: locale.emailText,
+                            hintText: locale.emailHint,
                           ),
                         ),
                       ),
@@ -68,40 +71,48 @@ class LoginView extends StatelessWidget {
                         ),
                         child: PasswordInput(
                           // controller: emailController,
-                          label: locale.phoneText,
-                          hint: locale.phoneHint,
+                          label: locale.passwordText,
+                          hint: locale.passwordHint,
                         ),
                       ),
                       const SizedBox(height: 16.0),
                       Container(
                         margin: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width / 12,
-                          // vertical: MediaQuery.of(context).size.width / 40,
+                          horizontal: context.width / 12,
                         ),
                         child: ElevatedButton(
                           onPressed: () {
-                            // xOffset = 0;
-                            // yOffset = 0;
-                            // scaleFactor = 1;
-                            // isDrawerOpen = false;
-                            // Navigator.pushReplacement(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (BuildContext context) => HomePage(),
-                            //   ),
-                            // );
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MenuPage(),
+                              ),
+                            );
                           },
                           child: Text(
-                            locale.continueText,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                // color: GoRideColors.black,
-                                fontSize: 16),
+                            locale.login,
                           ),
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: Size(310, 50),
-                            // primary: GoRideColors.yellow,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: context.width / 12,
+                        ),
+                        child: OutlinedButton(
+                          child: Text(
+                            locale.register,
                           ),
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const RegisterView(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                       // CustomButton(
